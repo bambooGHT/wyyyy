@@ -1,0 +1,159 @@
+.album-list {
+  .liked {
+    color: $ThemeC22;
+  }
+
+  .liback {
+    background-color: $ThemeC9  !important;
+  }
+
+  .click:hover {
+    color: $ThemeC22;
+    cursor: pointer;
+  }
+
+  .copy {
+    color: $ThemeC10;
+  }
+
+  nav {
+    display: inline-block;
+  }
+
+  li {
+    width: 100%;
+    display: flex;
+    font-size: 1.5rem;
+    flex-wrap: wrap;
+    position: relative;
+
+    &:not(.D):hover {
+      background-color: $ThemeC8;
+    }
+
+    &:nth-child(2n)::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 3.6rem;
+      z-index: -1;
+      background-color: $ThemeC7;
+    }
+
+    .DISC {
+      flex: 1;
+      background: linear-gradient(-90deg, transparent, $ThemeC2 100%);
+    }
+
+    div {
+      height: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      padding: 1rem 0;
+      padding-right: 0.5rem;
+    }
+
+    div:nth-child(1) {
+      &:not(.DISC) {
+        text-align: center;
+      }
+
+      width: 4rem;
+    }
+
+    div:nth-child(2) {
+      width: 4rem;
+    }
+
+    div:nth-child(3) {
+      display: flex;
+      text-overflow: clip;
+
+      article:nth-child(1) {
+        overflow: hidden;
+        white-space: nowrap;
+        width: min-content;
+        text-overflow: ellipsis;
+      }
+
+      article:nth-child(2) {
+        width: min-content;
+      }
+    }
+
+    div:nth-child(3),
+    div:nth-child(5) {
+      flex: 2;
+    }
+
+    div:nth-child(4) {
+      flex: 1;
+    }
+
+    div:nth-child(6) {
+      width: 5rem;
+    }
+
+    div:nth-child(7) {
+      width: 15rem;
+    }
+
+    .lyric {
+      width: 100%;
+      position: relative;
+
+      input {
+        display: none;
+      }
+
+      &-txt {
+        height: 5.35rem;
+        padding: 0 !important;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        white-space: pre-wrap;
+        user-select: text;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+
+      input:checked~.lyric-txt {
+        height: auto;
+      }
+
+      .label {
+        display: block;
+        position: absolute;
+        right: 5rem;
+        top: 1rem;
+
+        &:hover {
+          cursor: pointer;
+          color: $ThemeC22;
+        }
+      }
+    }
+  }
+
+  .top {
+    position: relative;
+    min-width: 10rem;
+    padding: 0.7rem 0;
+    margin: auto 0;
+
+    span {
+      position: absolute;
+      width: 12rem;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      height: 0.9rem;
+      border-radius: 2rem;
+      border: 1px solid $ThemeC22;
+      background: -webkit-linear-gradient(left, $ThemeC2, $ThemeC22) no-repeat, #ebebeb;
+    }
+  }
+}

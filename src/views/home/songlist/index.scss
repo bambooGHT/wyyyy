@@ -1,0 +1,184 @@
+.a {
+  @import '@/views/userrecommend/index.scss';
+}
+
+.hotcat {
+  display: flex;
+  margin-bottom: 1.5rem;
+  
+  div {
+    cursor: pointer;
+  }
+
+  .click {
+    color: $ThemeC22;
+  }
+
+  span {
+    margin: 0 1.5rem;
+  }
+}
+
+.tag {
+  font-size: 1.4rem;
+  margin-left: 1rem;
+
+  &-all {
+    margin: 0.5rem 0 1.5rem;
+    position: relative;
+    .count {
+      position: absolute;
+      top: 0.2rem;
+      left: 15rem;
+
+      span {
+        color: $ThemeC22;
+      }
+    }
+
+    &>.cats {
+      cursor: default;
+      display: inline-block;
+      width: auto;
+      height: 2rem;
+      line-height: 2rem;
+      border: 1px solid $ThemeC10;
+
+      &:hover~nav {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      span {
+        padding: 0 0.5rem;
+      }
+    }
+
+    nav {
+      position: absolute;
+      visibility: hidden;
+      opacity: 0;
+      transition: .3s;
+      padding-top: 2rem;
+      z-index: 5;
+
+      &::before {
+        position: absolute;
+        top: 0.3rem;
+        left: 0.5rem;
+        content: '';
+        z-index: 1;
+        border: 1.5rem solid transparent;
+        border-top: none;
+        border-bottom-color: #FFF;
+        transform: scaleY(1.3);
+      }
+
+      &:hover {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    ul {
+      width: 55rem;
+      height: 42rem;
+      padding: 1rem 2rem;
+      color: $ThemeC3;
+      box-shadow: 0 0 12px 3px $ThemeC10;
+      background: #FFF;
+      overflow-y: auto;
+
+      &::-webkit-scrollbar-track {
+        border-radius: 2rem;
+        background-color: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 2rem;
+        background-color: $ThemeC2;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0.6rem;
+      }
+
+      &:hover {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      li {
+        margin: 2rem 0;
+
+        .catall {
+          width: 100%;
+          border: 1px solid $ThemeC10;
+          line-height: 2.5rem;
+          height: 2.5rem;
+        }
+
+        .tags {
+          width: 6rem;
+          font-size: 2rem;
+          color: $ThemeC22;
+          font-family: serif;
+          font-weight: bold;
+        }
+
+        .cat {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+
+          div {
+            flex: 0 0 20.2%;
+            border: 1px solid $ThemeC10;
+            line-height: 3rem;
+            height: 3rem;
+            margin-right: -1px;
+            margin-bottom: -1px;
+            text-align: center;
+            position: relative;
+
+            span {
+              display: inline-block;
+              position: absolute;
+              top: 0;
+              line-height: 1;
+              right: -0.2rem;
+              color: $ThemeC22;
+              font-weight: bolder;
+              font-size: 1.2rem;
+              transform: scale(0.75);
+            }
+          }
+
+          .key {
+            position: relative;
+            z-index: 1;
+            border: 1px solid $ThemeC22  !important;
+          }
+        }
+
+        &:nth-child(1) {
+          text-align: center;
+        }
+
+        &:nth-child(n+2) {
+          display: flex;
+
+          .cat {
+            flex: 1;
+          }
+        }
+
+        .catall:hover,
+        .cat div:hover {
+          cursor: pointer;
+          background-color: $ThemeC7;
+        }
+      }
+    }
+  }
+}

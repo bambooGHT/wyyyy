@@ -1,0 +1,103 @@
+.artist {
+  width: 100%;
+  height: auto;
+
+  * {
+    color: $ThemeC3;
+  }
+
+  &-info {
+    height: clamp(17rem, 16vw, 25rem);
+    display: flex;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    font-size: 1.3rem;
+
+    .img {
+      width: clamp(15rem, 14vw, 22rem);
+      height: clamp(15rem, 14vw, 22rem);
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .info {
+      margin-left: 2rem;
+
+      .name {
+        font-size: clamp(1.7rem, 1.5vw, 2.5rem);
+      }
+
+      .name1 {
+        font-size: clamp(1.5rem, 1.3vw, 2rem);
+
+        span {
+          display: inline-block;
+          margin-right: 1rem;
+        }
+      }
+
+      .name2 {
+        font-size: 1.6rem;
+        margin: 1rem;
+        position: relative;
+
+        &:hover {
+          cursor: pointer;
+          color: $ThemeC22;
+
+          i {
+            color: $ThemeC22;
+          }
+        }
+      }
+
+      &-2 {
+        margin-top: 3rem;
+
+        div {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+
+  .tag {
+    font-size: 1.6rem;
+    color: $ThemeC3;
+    margin: 2rem 0;
+
+    &-list {
+      display: flex;
+      margin: 2rem 0 0rem 2rem;
+
+      div {
+        margin: 0 2rem;
+        cursor: pointer;
+        position: relative;
+
+        &:hover {
+          color: $ThemeC22;
+        }
+
+        &:hover::before {
+          position: absolute;
+          content: '';
+          bottom: -4px;
+          width: 100%;
+          height: 3px;
+          background-color: $ThemeC2;
+        }
+      }
+    }
+
+    .hr {
+      width: 100%;
+      height: .2rem;
+      background-color: $ThemeC2;
+      margin: 1rem 0;
+    }
+  }
+}

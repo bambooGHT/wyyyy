@@ -1,0 +1,171 @@
+.song {
+  display: flex;
+  margin-top: 1rem;
+
+  img {
+    display: block;
+    width: 20rem;
+    height: 20rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+  }
+
+  .user {
+    font-size: 1.5rem;
+    color: $ThemeC3;
+    min-width: 41rem;
+    flex: 1;
+    max-width: 75rem;
+
+    &-songid {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .ing {
+      display: inline-block;
+      box-sizing: content-box;
+      border: 1px solid red;
+      border-radius: 4px;
+      font-size: 1.6rem;
+      width: auto;
+      padding: 0 0.3rem;
+      height: 2rem;
+      text-align: center;
+      color: #ff3434;
+    }
+
+    &-time {
+      font-size: 1.4rem;
+
+      span {
+        cursor: pointer;
+      }
+
+      img {
+        cursor: pointer;
+        display: inline-block;
+        vertical-align: middle;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        margin: 0rem;
+      }
+    }
+
+    &-Details {
+      display: flex;
+      margin: 1.5rem 0;
+      color: $ThemeC5;
+
+      div,
+      del {
+        box-sizing: border-box;
+        border: 2px solid $ThemeC2;
+        background-color: $ThemeC2;
+        margin-right: 2rem;
+        height: 2.5rem;
+        line-height: 2rem;
+        padding: 0 0.4rem;
+        transition: 0.3s;
+        width: auto;
+
+        nav {
+          padding-right: 1.5em;
+          position: relative;
+          display: inline;
+          width: 1rem;
+          height: 100%;
+
+          span {
+            position: absolute;
+            right: 1rem;
+            top: 0.3rem;
+            width: 2px;
+            height: 1.5rem;
+            background-color: #ff3434;
+            font-weight: bold;
+            transition: 0.3s;
+
+            &:nth-child(1) {
+              transform: rotateZ(90deg);
+            }
+          }
+        }
+
+        &:hover {
+          color: $ThemeC22;
+          cursor: pointer;
+          border: 2px solid $ThemeC22;
+          background-color: $ThemeC7;
+
+          span {
+            background-color: #ff343499;
+          }
+        }
+      }
+    }
+
+    &-Introduction {
+      font-size: 1.3rem;
+      position: relative;
+
+      .text {
+        position: absolute;
+        bottom: -2rem;
+        left: 50%;
+        font-size: 1.5rem;
+
+        &:hover {
+          color: $ThemeC22;
+          cursor: pointer;
+        }
+      }
+
+      span {
+        white-space: pre-wrap;
+      }
+    }
+
+    &-track {
+      margin-top: .5rem;
+      text-align: center;
+      font-size: 1.4rem;
+      min-width: 18rem;
+      .track-t span{
+        width: 0.2rem;
+        background-color: $ThemeC9;
+      }
+      .track-t,
+      .track-b {
+        white-space: nowrap;
+        p {
+          min-width: 5.6rem;
+        }
+        display: flex;
+        justify-content: end;
+        .color {
+          color: $ThemeC10;
+        }
+      }
+
+      .track-b {
+        margin-top: 4rem;
+        cursor: default;
+
+        nav {
+          display: inline-block;
+          cursor: pointer;
+
+          &:hover {
+            color: $ThemeC22;
+          }
+        }
+      }
+
+      div {
+        margin: 0 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.count {
+  i {
+    font-size: 2rem;
+    font-weight: bold
+  }
+}
+
+.a {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    display: flex;
+    width: 25%;
+    overflow: hidden;
+    padding-right: 0.5rem;
+    position: relative;
+
+    @media screen and (max-width:1900px) {
+      width: 33%;
+    }
+
+    @media screen and (max-width:1350px) {
+      width: 50%;
+    }
+
+    .txt {
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .w {
+      width: clamp(14rem, 12vw, 18rem);
+      background: linear-gradient(90deg, transsparent, #383838dc 80%);
+      right: auto;
+    }
+
+    .lastSong {
+      position: absolute;
+      width: clamp(14rem, 12vw, 18rem);
+      height: 60%;
+    }
+
+    img {
+      cursor: pointer;
+      margin-right: 1rem;
+    }
+
+    .topath {
+      display: inline-block;
+      width: auto;
+    }
+
+    .topath:nth-child(3) {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 1.3rem;
+      color: $ThemeC10;
+      margin-top: 1rem;
+    }
+
+    .topath:nth-child(5) {
+      cursor: default;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-top: 2rem;
+      color: $ThemeC3
+    }
+  }
+
+  .ings {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.cat {
+  div {
+    flex: 0 0 20.16% !important;
+  }
+}

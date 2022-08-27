@@ -1,0 +1,230 @@
+.ili {
+  font-size: 3rem;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+
+  .list {
+    z-index: 999;
+    font-size: 1.5rem;
+    position: absolute;
+    left: -0.5rem;
+    top: 0.3rem;
+    text-align: center;
+    background-color: $ThemeC4;
+    font-weight: bold;
+    color: #f0f0f0;
+    width: 3rem;
+    height: 1.4rem;
+    line-height: 1.4rem;
+    border-radius: 5%;
+  }
+
+  .plist {
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0rem;
+    width: 50rem;
+    height: 45rem;
+    background-color: $ThemeC5;
+    box-shadow: 0 0 1rem #000;
+    font-size: 1.7rem;
+    cursor: default;
+
+    .top {
+      background-color: $ThemeC1;
+
+      .hr {
+        width: 100%;
+        height: 1px;
+        background-color: $ThemeC2;
+      }
+
+      .tab {
+        display: flex;
+        justify-content: center;
+
+        &-a {
+          cursor: pointer;
+          margin: .5rem .5rem;
+        }
+
+        .colors {
+          border-bottom: 2px solid red;
+        }
+      }
+
+      .t {
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 2rem;
+
+        span {
+          margin: 0 .5rem;
+
+          &:nth-child(2) {
+            cursor: pointer;
+          }
+        }
+      }
+
+      ul {
+        li {
+          position: sticky;
+          top: 0rem;
+          background-color: $ThemeC1;
+
+          &:hover {
+            background-color: $ThemeC1;
+          }
+
+          div {
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .nav {
+      overflow-y: auto;
+      height: 37.262rem;
+
+      &::-webkit-scrollbar-track {
+        border-radius: 2rem;
+        background-color: #f1f1f1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 2rem;
+        background-color: $ThemeC2;
+      }
+
+      &::-webkit-scrollbar {
+        width: 0.6rem;
+      }
+
+      &-center {
+        li {
+          padding: 0 0.5rem;
+          display: flex;
+
+          &:nth-child(even) {
+            background-color: $ThemeC8;
+          }
+
+          &:hover {
+            background-color: $ThemeC9;
+          }
+
+          div nav,
+          .not:nth-child(1) {
+            cursor: pointer;
+
+            &:hover {
+              color: $ThemeC22;
+            }
+          }
+
+          div {
+            height: 2.4rem;
+            line-height: 2.4rem;
+            font-size: 1.4rem;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            span,
+            nav {
+              display: inline;
+              width: 100%;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+
+            &:nth-child(1) {
+              text-align: center;
+              width: 3.4rem;
+            }
+
+            &:nth-child(2) {
+              width: 25rem;
+
+              display: flex;
+              text-overflow: clip;
+
+              article:nth-child(1) {
+                overflow: hidden;
+                white-space: nowrap;
+                width: min-content;
+                text-overflow: ellipsis;
+              }
+
+              article:nth-child(2) {
+                width: min-content;
+              }
+            }
+
+            &:nth-child(3) {
+              width: 14.5rem;
+            }
+
+            &:nth-child(4) {
+              width: 4rem;
+            }
+
+            &:nth-child(5) {
+              cursor: pointer;
+              font-size: 1.7rem;
+              width: 1.5rem;
+            }
+          }
+        }
+      }
+
+      &-center1 {
+        li {
+          div {
+            &:nth-child(2) {
+              width: 23rem;
+            }
+
+            &:nth-child(3) {
+              width: 14rem;
+            }
+
+            &:nth-child(4) {
+              width: 8rem;
+            }
+
+            &:nth-child(5) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+
+.playlist-enter-active,
+.playlist-leave-active {
+  transition: opacity 0.3s ease;
+}
+
+.playlist-enter-from,
+.playlist-leave-to {
+  opacity: 0;
+}

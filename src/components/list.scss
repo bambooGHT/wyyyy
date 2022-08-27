@@ -1,0 +1,97 @@
+.list {
+  color: $ThemeC3;
+
+  .liback {
+    background-color: $ThemeC9  !important;
+  }
+
+  .no-copyright {
+    color: $ThemeC10;
+  }
+
+  li {
+    display: flex;
+
+    .tns {
+      color: $ThemeC10;
+    }
+
+    .suki {
+      cursor: pointer;
+    }
+
+    div {
+      font-size: 1.3rem;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-left: 0.5rem;
+      height: 3.5rem;
+      line-height: 3.5rem;
+      cursor: default;
+
+      &:nth-child(-n+2) {
+        text-align: center;
+        width: 3.8rem;
+        order: 1;
+      }
+
+      &:nth-child(n+3):nth-child(-n+5) {
+
+        nav,
+        span {
+          display: inline;
+        }
+
+        nav:hover {
+          cursor: pointer;
+          color: $ThemeC22;
+        }
+      }
+
+      &:nth-child(3) {
+        display: flex;
+        text-overflow: clip;
+
+        article:nth-child(1) {
+          overflow: hidden;
+          white-space: nowrap;
+          width: min-content;
+          text-overflow: ellipsis;
+        }
+
+        .tns {
+          user-select: none;
+        }
+
+        article:nth-child(2) {
+          width: min-content;
+        }
+
+        flex: 1.8;
+        order: 2;
+      }
+
+      &:nth-child(n+4):nth-child(-n+5) {
+        flex: 1.5;
+        order: 3;
+      }
+
+
+      &:nth-child(6) {
+        width: 6rem;
+        order: 4;
+      }
+    }
+  }
+
+  li:not(.not) {
+    &:nth-child(even) {
+      background-color: $ThemeC7;
+    }
+
+    &:hover {
+      background-color: $ThemeC8;
+    }
+  }
+}
