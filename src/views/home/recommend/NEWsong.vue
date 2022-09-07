@@ -42,7 +42,7 @@ const tonew = () => {
             </div>
             <div class="id">
               <div>{{ p.name }}</div>
-              <div class="ar" :title="p.song.artists.map(i => i.name).join(' / ')">
+              <div class="ar" :title="p.song.artists.map((i:any) => i.name).join(' / ')">
                 <nav v-for="(s, index) in p.song.artists">
                   <span class="click" @click.stop="toar(s.id)">{{ s.name }}</span>
                   <span class="copy">{{ p.song.artists.length > index + 1 ? ` /&nbsp` : '' }}</span>
@@ -157,7 +157,7 @@ const tonew = () => {
     }
 
     &:hover {
-      background-color: $ThemeC8  !important;
+      background-color: $ThemeC8 !important;
 
       .img {
         &:after {
