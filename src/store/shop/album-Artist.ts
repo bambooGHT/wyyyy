@@ -81,6 +81,8 @@ const album = defineStore('album', {
     //播放
     async play(id: number) {
       const result = await songsurl(id);
+      console.log(result);
+      
       const copy = this.Copy(result);
       if (copy) return;
       const result1 = await getsongurlv1(result.songs[0].id);

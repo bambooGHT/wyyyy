@@ -392,7 +392,7 @@ const playmusic = defineStore('playmusic', {
     lyricwheel() {
       debounce1(() => {
         // 滾動距離 /dom元素高度
-        const Index = Math.floor(this.lyricdiv.scrollTop / this.Lyricdom[0].offsetHeight);
+        const Index = ~~(this.lyricdiv.scrollTop / this.Lyricdom[0].offsetHeight);
         this.Lyrictime = {
           time: this.Lyric[Index].time,
           index: Index

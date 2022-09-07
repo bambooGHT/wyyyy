@@ -46,7 +46,7 @@ const toartist = (id: number) => {
         <li v-if="typeof Album.songs[indexs] === 'string'" class="D">
           <div class="DISC">{{ p }}</div>
         </li>
-        <li v-else @click="libackg(indexs)" @dblclick="Album.play(p)"
+        <li v-else @click="libackg(indexs)" @dblclick="Album.play(p.id)"
           :class="{ 'copy': p.privilege.cp === 0, liback: indexs === index }">
           <div :title="p.index">{{ p.index < 10 ? '0' + p.index : p.index }}</div>
               <div class="liked">喜欢</div>
